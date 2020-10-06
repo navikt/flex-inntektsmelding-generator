@@ -13,6 +13,10 @@ class Environment {
     get opprettInntektsmeldingRoot() {
         return this.env.OPPRETT_INNTEKTSMELDING_ROOT
     }
+
+    get slettInntektsmeldingRoot() {
+        return this.env.SLETT_INNTEKTSMELDING_ROOT
+    }
 }
 
 const env = new Environment()

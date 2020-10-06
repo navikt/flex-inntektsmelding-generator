@@ -2,6 +2,7 @@ import React from 'react'
 
 import Fodselsnummer from './Fodselsnummer'
 import SendInntektsmelding from './SendInntektsmelding'
+import SlettInntektsmeldinger from './SlettInntektsmeldinger'
 import StoreProvider from './stores/store-provider'
 import Virksomhetsnummer from './Virksomhetsnummer'
 
@@ -20,6 +21,7 @@ function App() {
                 <Fodselsnummer />
                 <Virksomhetsnummer />
                 <SendInntektsmelding />
+                <SlettInntektsmeldinger />
             </div>
         </StoreProvider>
     )

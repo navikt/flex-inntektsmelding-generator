@@ -30,3 +30,5 @@ spec:
       value: "q1"
     - name: OPPRETT_INNTEKTSMELDING_ROOT
       value: "https://flex-inntektsmelding-mock-proxy.dev.nav.no/api/v1/mock/inntektsmeldinger"
+    - name: SLETT_INNTEKTSMELDING_ROOT
+      value: "https://flex-inntektsmelding-mock-proxy.dev.nav.no/api/v1/mock/inntektsmeldinger"
