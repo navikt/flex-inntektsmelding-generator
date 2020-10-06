@@ -4,6 +4,7 @@ import { v4 as uuid } from 'uuid'
 
 import { useAppStore } from './stores/app-store'
 import { Inntektsmelding } from './types/Inntektsmelding'
+import env from './utils/environment'
 
 
 function SendInntektsmelding() {
@@ -51,7 +52,7 @@ function SendInntektsmelding() {
                 }
                 try {
                     setFetching(true)
-                    const res = await fetch(`https://flex-inntektsmelding-mock-proxy.dev.nav.no/api/v1/mock/inntektsmeldinger/${fodselsnummer}`, {
+                    const res = await fetch(`${env.opprettInntektsmeldingRoot()}/${fodselsnummer}`, {
                         method: 'POST',
                         credentials: 'include',
                         body: JSON.stringify(genererInntektsmelding()),
