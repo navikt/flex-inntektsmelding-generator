@@ -10,7 +10,7 @@ import env from './utils/environment'
 function SendInntektsmelding() {
 
     const [ fetching, setFetching ] = useState(false)
-    const { virksomhetsnummer, fodselsnummer } = useAppStore()
+    const { virksomhetsnummer, fodselsnummer, månedslønn } = useAppStore()
 
     const genererInntektsmelding = (): Inntektsmelding => {
         return {
@@ -21,7 +21,7 @@ function SendInntektsmelding() {
             'begrunnelseForReduksjonEllerIkkeUtbetalt': 'En optional begrunnelse',
             'arbeidsgivertype': 'VIRKSOMHET',
             'arbeidsforholdId': uuid(),
-            'beregnetInntekt': '38000.00',
+            'beregnetInntekt': `${månedslønn}.00`,
             'refusjon': { 'beloepPrMnd': '3000.00', 'opphoersdato': LocalDate.now() },
             'endringIRefusjoner': [ { 'endringsdato': LocalDate.now(), 'beloep': '20000.00' } ],
             'opphoerAvNaturalytelser': [ {
@@ -68,7 +68,7 @@ function SendInntektsmelding() {
                     setFetching(false)
                 }
 
-            }}>Send inntekstmelding <span role={'img'} aria-label={'Money with Wings'}>💸</span>
+            }}>Send inntektsmelding <span role={'img'} aria-label={'Money with Wings'}>💸</span>
             </button>
         </div>
     )

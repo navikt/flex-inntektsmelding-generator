@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Fodselsnummer from './Fodselsnummer'
+import Månedslønn from './Månedslønn'
 import SendInntektsmelding from './SendInntektsmelding'
 import SlettInntektsmeldinger from './SlettInntektsmeldinger'
 import StoreProvider from './stores/store-provider'
@@ -20,6 +21,7 @@ function App() {
                 <h1 style={{ textAlign: 'center' }}>Inntekstmelding testdatagenerator</h1>
                 <Fodselsnummer />
                 <Virksomhetsnummer />
+                <Månedslønn />
                 <SendInntektsmelding />
                 <SlettInntektsmeldinger />
             </div>
