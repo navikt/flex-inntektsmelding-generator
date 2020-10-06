@@ -52,7 +52,7 @@ function SendInntektsmelding() {
                 }
                 try {
                     setFetching(true)
-                    const res = await fetch(`${env.opprettInntektsmeldingRoot()}/${fodselsnummer}`, {
+                    const res = await fetch(`${env.opprettInntektsmeldingRoot}/${fodselsnummer}`, {
                         method: 'POST',
                         credentials: 'include',
                         body: JSON.stringify(genererInntektsmelding()),
